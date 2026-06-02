@@ -64,8 +64,8 @@ function Promociones() {
 
                 <span>{promo.price}</span>
 
-                <button>
-                  Hace tu pedido por whatsapp
+                <a heref="https://mpago.la/2JaACq4">
+                  Paga con mercado Pago
                 </button>
               </div>
             </div>
