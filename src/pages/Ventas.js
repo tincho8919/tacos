@@ -6,25 +6,29 @@ function Ventas() {
       title: "Taco Clásico",
       desc: "Carne, queso cheddar, vegetales frescos",
       price: "$4.99",
-      img: "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg"
+      img: "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg",
+      payLink: "https://mpago.la/2JaACq4"
     },
     {
       title: "Combo Mexicano",
       desc: "3 tacos + nachos + bebida",
       price: "$12.99",
-      img: "https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?auto=format&fit=crop&w=1200&q=80"
+      img: "https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?auto=format&fit=crop&w=1200&q=80",
+      payLink: "https://mpago.la/2JaACq4"
     },
     {
       title: "Mega Taco Box",
       desc: "Tacos premium para compartir",
       price: "$19.99",
-      img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80"
+      img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
+      payLink: "https://mpago.la/2JaACq4"
     },
     {
-     title: "Nachos Supreme",
-    desc: "Nachos con queso fundido y carne",
-    price: "$8.99",
-    img: "https://images.unsplash.com/photo-1562967916-eb82221dfb92?auto=format&fit=crop&w=1200&q=80"
+      title: "Nachos Supreme",
+      desc: "Nachos con queso fundido y carne",
+      price: "$8.99",
+      img: "https://images.unsplash.com/photo-1562967916-eb82221dfb92?auto=format&fit=crop&w=1200&q=80",
+      payLink: "https://mpago.la/2JaACq4"
     }
   ];
 
@@ -72,11 +76,14 @@ function Ventas() {
 
                 <span>{item.price}</span>
 
-                <button>
-                 <a href="https://mpago.la/2JaACq4" target="_blank" rel="noopener noreferrer" className="ancla">
-                   Comprar ahora
-                 </a>
-                </button>
+                <a
+                  href={item.payLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="buy-btn"
+                >
+                  Comprar ahora
+                </a>
 
               </div>
 

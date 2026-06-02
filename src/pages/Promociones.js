@@ -6,19 +6,22 @@ function Promociones() {
       title: "Combo Taco Lovers",
       desc: "3 tacos + papas + bebida grande",
       price: "$9.99",
-      img: "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg"
+      img: "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg",
+      payLink: "https://mpago.la/1BJznt3"
     },
     {
       title: "Promo Amigos",
       desc: "6 tacos para compartir",
       price: "$14.99",
-      img: "https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?auto=format&fit=crop&w=1200&q=80"
+      img: "https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?auto=format&fit=crop&w=1200&q=80",
+      payLink: "https://mpago.la/1BJznt3"
     },
     {
       title: "Mega Combo",
       desc: "Tacos + nachos + bebida",
       price: "$12.99",
-      img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80"
+      img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
+      payLink: "https://mpago.la/1BJznt3"
     }
   ];
 
@@ -52,6 +55,7 @@ function Promociones() {
 
           {promos.map((promo, index) => (
             <div className="promo-card" key={index}>
+              
               <img
                 src={promo.img}
                 alt={promo.title}
@@ -64,11 +68,15 @@ function Promociones() {
 
                 <span>{promo.price}</span>
 
-                <button>
-                 <a href="https://mpago.la/2JaACq4" target="_blank" rel="noopener noreferrer" className="ancla">
-                   Comprar ahora
-                 </a>
-                </button>
+                <a
+                  href={promo.payLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="buy-btn"
+                >
+                  Comprar ahora
+                </a>
+
               </div>
             </div>
           ))}

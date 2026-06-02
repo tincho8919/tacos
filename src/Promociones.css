@@ -1,134 +1,179 @@
 .promo-page{
   background:#111;
   color:white;
-  min-height:100vh;
 }
 
+/* ========================= */
+/* HERO */
+/* ========================= */
 .promo-hero{
-  height:70vh;
+  height:60vh;
   position:relative;
+  background:url("https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?auto=format&fit=crop&w=1600&q=80");
+  background-size:cover;
+  background-position:center;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
-
-  background-image:url("https://images.unsplash.com/photo-1613514785940-daed07799d9?auto=format&fit=crop&w=1800&q=80");
-  background-size:cover;
-  background-position:center;
 }
 
 .promo-overlay{
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,.55);
+  background:rgba(0,0,0,.6);
 }
 
 .promo-content{
   position:relative;
   z-index:2;
   max-width:800px;
+  padding:20px;
 }
 
 .promo-content span{
   letter-spacing:4px;
   font-size:14px;
+  color:#fff;
 }
 
 .promo-content h1{
-  font-size:clamp(55px,8vw,100px);
+  font-size:clamp(45px,7vw,85px);
+  font-weight:900;
   line-height:.95;
   margin:20px 0;
-  font-weight:900;
 }
 
 .promo-content p{
-  font-size:22px;
+  font-size:20px;
+  color:#ddd;
 }
 
+/* ========================= */
+/* SECTION */
+/* ========================= */
 .promo-section{
   padding:100px 8%;
+  text-align:center;
 }
 
 .promo-section h2{
   font-size:50px;
-  margin-bottom:50px;
-  text-align:center;
+  margin-bottom:60px;
 }
 
+/* GRID */
 .promo-grid{
   display:grid;
-  grid-template-columns:
-  repeat(auto-fit,minmax(320px,1fr));
-  gap:35px;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
 }
 
+/* CARD */
 .promo-card{
   background:#1b1b1b;
-  border-radius:35px;
+  border-radius:25px;
   overflow:hidden;
   transition:.3s;
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
 }
 
 .promo-card:hover{
-  transform:translateY(-10px);
+  transform:translateY(-8px);
 }
 
+/* IMAGE */
 .promo-card img{
   width:100%;
-  height:300px;
+  height:220px;
   object-fit:cover;
 }
 
+/* INFO */
 .promo-info{
-  padding:30px;
+  padding:25px;
+  text-align:left;
 }
 
 .promo-info h3{
-  font-size:30px;
+  font-size:22px;
+  margin-bottom:10px;
 }
 
 .promo-info p{
-  color:#c0c0c0;
-  margin:15px 0;
+  color:#bdbdbd;
+  font-size:15px;
+  margin-bottom:10px;
 }
 
 .promo-info span{
-  font-size:35px;
-  font-weight:bold;
+  display:block;
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:20px;
+  color:#fff;
 }
 
-.promo-info button{
-  width:100%;
-  border:none;
-  margin-top:20px;
-  padding:18px;
+/* BUTTON (LINK) */
+.buy-btn{
+  display:inline-block;
+  background:#fff;
+  color:#111;
+  padding:12px 20px;
   border-radius:999px;
-  cursor:pointer;
-  font-size:17px;
-  font-weight:bold;
-  
+  font-weight:700;
+  text-decoration:none;
+  transition:.3s;
 }
 
-.ancla{
-  text-decoration:none;
+.buy-btn:hover{
+  transform:translateY(-3px);
+  background:#ffcc00;
 }
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+@media (max-width: 1024px){
+  .promo-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .promo-section{
+    padding:80px 6%;
+  }
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+@media (max-width: 768px){
+  .promo-hero{
+    height:50vh;
+  }
+
+  .promo-content p{
+    font-size:17px;
+  }
+
+  .promo-grid{
+    grid-template-columns:1fr;
+  }
+
+  .promo-section h2{
+    font-size:32px;
+  }
+}
+
 /* ========================= */
 /* SMALL MOBILE */
 /* ========================= */
 @media (max-width: 480px){
-  .about{
-    padding:60px 5%;
+  .promo-content h1{
+    font-size:32px;
   }
 
-  .about-image img{
-    height:280px;
-  }
-
-  .about-content h2{
-    font-size:34px;
-  }
-
-  .about-content p{
-    font-size:16px;
+  .promo-info{
+    padding:20px;
   }
 }
