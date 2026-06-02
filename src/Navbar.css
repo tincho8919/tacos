@@ -1,9 +1,11 @@
+/* RESET */
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
 }
 
+/* NAVBAR */
 .navbar{
   position: fixed;
   top:0;
@@ -20,6 +22,7 @@
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 
+/* LOGO */
 .logo{
   color:white;
   font-size:32px;
@@ -27,6 +30,7 @@
   cursor:pointer;
 }
 
+/* MENU */
 .navbar ul{
   display:flex;
   align-items:center;
@@ -46,6 +50,7 @@
   opacity:.75;
 }
 
+/* BUTTON */
 .navbar button{
   border:none;
   background:white;
@@ -59,4 +64,63 @@
 
 .navbar button:hover{
   transform:translateY(-2px);
+}
+
+/* ========================= */
+/* HAMBURGER (OCULTO DESKTOP) */
+/* ========================= */
+
+.menu-icon{
+  display:none;
+  font-size:30px;
+  color:white;
+  cursor:pointer;
+}
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+@media (max-width: 1024px){
+  .navbar{
+    padding:0 6%;
+  }
+
+  .navbar ul{
+    gap:20px;
+  }
+
+  .logo{
+    font-size:28px;
+  }
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+@media (max-width: 768px){
+
+  .menu-icon{
+    display:block;
+  }
+
+  .navbar ul{
+    position: absolute;
+    top:90px;
+    left:0;
+    width:100%;
+    flex-direction:column;
+    background: rgba(10,10,10,.98);
+    padding:20px 0;
+    gap:20px;
+
+    display:none;
+  }
+
+  .navbar ul.active{
+    display:flex;
+  }
+
+  .navbar button{
+    display:none;
+  }
 }

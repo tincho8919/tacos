@@ -4,10 +4,13 @@
   min-height:100vh;
 }
 
+/* ========================= */
+/* HERO */
+/* ========================= */
 .about-hero{
   height:70vh;
   position:relative;
-  background-image:url("https://images.unsplash.com/photo-1613514785940-daed07799d9?auto=format&fit=crop&w=1600&q=80");
+  background-image:url("https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=1600&q=80");
   background-size:cover;
   background-position:center;
   display:flex;
@@ -45,6 +48,9 @@
   font-size:22px;
 }
 
+/* ========================= */
+/* STORY */
+/* ========================= */
 .story-section{
   padding:120px 8%;
   display:flex;
@@ -74,14 +80,19 @@
 .story-content h2{
   font-size:60px;
   margin:20px 0;
+  line-height:1.1;
 }
 
 .story-content p{
   color:#c0c0c0;
   line-height:1.8;
   font-size:20px;
+  margin-bottom:15px;
 }
 
+/* ========================= */
+/* VALUES */
+/* ========================= */
 .values-section{
   padding:100px 8%;
   text-align:center;
@@ -111,4 +122,86 @@
 
 .value-card p{
   color:#bdbdbd;
+}
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+@media (max-width: 1024px){
+
+  .story-section{
+    gap:40px;
+    padding:100px 6%;
+  }
+
+  .story-image img{
+    height:450px;
+  }
+
+  .story-content h2{
+    font-size:45px;
+  }
+
+  .values-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+@media (max-width: 768px){
+
+  .about-hero{
+    height:60vh;
+    padding:20px;
+  }
+
+  .hero-text p{
+    font-size:18px;
+  }
+
+  .story-section{
+    flex-direction:column;
+    text-align:center;
+    padding:80px 6%;
+  }
+
+  .story-image img{
+    height:350px;
+  }
+
+  .story-content h2{
+    font-size:34px;
+  }
+
+  .story-content p{
+    font-size:17px;
+  }
+
+  .values-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+/* ========================= */
+/* SMALL MOBILE */
+/* ========================= */
+@media (max-width: 480px){
+
+  .hero-text h1{
+    font-size:36px;
+  }
+
+  .story-image img{
+    height:280px;
+  }
+
+  .values-section h2{
+    font-size:32px;
+  }
+
+  .value-card{
+    padding:30px;
+  }
 }

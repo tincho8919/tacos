@@ -23,3 +23,23 @@
 .whatsapp-button:hover{
   transform:translateY(-4px);
 }
+/* ========================= */
+/* SMALL MOBILE */
+/* ========================= */
+@media (max-width: 480px){
+  .about{
+    padding:60px 5%;
+  }
+
+  .about-image img{
+    height:280px;
+  }
+
+  .about-content h2{
+    font-size:34px;
+  }
+
+  .about-content p{
+    font-size:16px;
+  }
+}
