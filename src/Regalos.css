@@ -4,6 +4,12 @@
   min-height:100vh;
   padding:60px 8%;
 }
+.ofertas-page{
+  background:#111;
+  color:white;
+  min-height:100vh;
+  padding:140px 8% 60px; /* 👈 FIX IMPORTANTE */
+}
 
 .ofertas-hero{
   text-align:center;
