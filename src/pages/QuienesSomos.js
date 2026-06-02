@@ -26,8 +26,8 @@ function QuienesSomos() {
       <section className="story-section">
         <div className="story-image">
           <img
-            src="https://images.unsplash.com/photo-1565299585323-38174c4a6471?auto=format&fit=crop&w=1200&q=80"
-            alt="Tacos"
+          src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=1200&q=80"
+          alt="Tacos"
           />
         </div>
 
