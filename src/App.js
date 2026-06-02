@@ -13,6 +13,9 @@ import Promociones from "./pages/Promociones";
 import Ventas from "./pages/Ventas";
 import Regalos from "./pages/Regalos";
 import Juegos from "./pages/Juegos";
+import Ruleta from "./pages/Ruleta";
+import RaspaYGana from "./pages/RaspaYGana";
+import DesafioDiario from "./pages/DesafioDiario";
 
 import "./App.css";
 
@@ -21,7 +24,7 @@ function App() {
     <BrowserRouter>
 
       <Navbar />
-
+      
       <Routes>
 
         <Route
@@ -53,9 +56,11 @@ function App() {
           path="/juegos"
           element={<Juegos />}
         />
-
+        <Route path="/Ruleta" element={<Ruleta />} />
+        <Route path="/RaspaYGana" element={<RaspaYGana />} />
+        <Route path="/DesafioDiario" element={<DesafioDiario />} />
       </Routes>
-
+      
       <Footer />
       <WhatsappButton />
 

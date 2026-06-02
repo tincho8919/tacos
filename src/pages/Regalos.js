@@ -2,7 +2,7 @@ import "../Regalos.css";
 
 function Regalos() {
 
-  const phone = "5492645010690";
+  const phone = "5492645010690"; //poner numero de telefono de la empresa
 
   const offers = [
     {

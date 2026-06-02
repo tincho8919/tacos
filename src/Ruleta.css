@@ -1,0 +1,129 @@
+.ruleta-page{
+  background: radial-gradient(circle at top, #222, #0a0a0a);
+  color:white;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  text-align:center;
+  padding:20px;
+}
+
+/* CONTENEDOR */
+.wheel-container{
+  position:relative;
+  width:260px;
+  height:260px;
+}
+
+/* RULETA LUNA */
+.wheel{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  position:relative;
+  transition:transform 3s cubic-bezier(0.25, 1, 0.5, 1);
+
+  background: conic-gradient(
+    #ffcc00 0deg 51deg,
+    #ff5722 51deg 102deg,
+    #4caf50 102deg 153deg,
+    #2196f3 153deg 204deg,
+    #e91e63 204deg 255deg,
+    #9c27b0 255deg 306deg,
+    #444 306deg 360deg
+  );
+
+  box-shadow:
+    0 0 30px rgba(255,255,255,0.15),
+    inset 0 0 40px rgba(0,0,0,0.4);
+}
+
+/* brillo tipo luna */
+.shine{
+  position:absolute;
+  top:20px;
+  left:20px;
+  width:80px;
+  height:80px;
+  background:rgba(255,255,255,0.15);
+  border-radius:50%;
+  filter:blur(8px);
+}
+
+/* centro */
+.center-text{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-weight:900;
+  font-size:18px;
+}
+
+/* puntero */
+.pointer{
+  position:absolute;
+  top:-15px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:30px;
+}
+
+/* BOTONES */
+button{
+  background:#25D366;
+  border:none;
+  padding:12px 20px;
+  border-radius:10px;
+  color:white;
+  cursor:pointer;
+  font-weight:700;
+  width:100%;
+  max-width:260px;
+}
+
+button:disabled{
+  opacity:0.5;
+}
+
+/* RESULTADO */
+.result{
+  background:#1c1c1c;
+  padding:20px;
+  border-radius:15px;
+  width:100%;
+  max-width:300px;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px){
+
+  .wheel-container{
+    width:200px;
+    height:200px;
+  }
+
+  .center-text{
+    font-size:16px;
+  }
+
+  button{
+    max-width:220px;
+    font-size:14px;
+  }
+}
+
+@media (max-width: 480px){
+
+  .wheel-container{
+    width:170px;
+    height:170px;
+  }
+
+  h1{
+    font-size:22px;
+  }
+}
