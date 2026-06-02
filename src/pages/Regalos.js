@@ -25,12 +25,18 @@ function Regalos() {
     }
   ];
 
+  const getDiscountPrice = (price) => {
+    return (price * 0.8).toFixed(2);
+  };
+
   const sendReceipt = (item) => {
     const message = `
 Hola 👋 quiero acceder a la promoción:
 
 🍔 ${item.title}
-💰 Precio: $${item.price}
+💰 Precio original: $${item.price}
+🔥 Precio con 20% OFF: $${getDiscountPrice(item.price)}
+
 🎁 Beneficio: ${item.discount}
 
 📎 Envío mi comprobante de pago aquí para validar el descuento.
@@ -59,7 +65,15 @@ Hola 👋 quiero acceder a la promoción:
 
             <p>{item.desc}</p>
 
-            <span className="price">${item.price}</span>
+            {/* PRECIO ORIGINAL TACHADO */}
+            <span className="old-price">
+              ${item.price}
+            </span>
+
+            {/* PRECIO FINAL */}
+            <span className="new-price">
+              💥 ${getDiscountPrice(item.price)}
+            </span>
 
             <span className="discount">
               🎁 {item.discount}

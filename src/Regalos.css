@@ -53,7 +53,19 @@ button{
   border-radius:10px;
   cursor:pointer;
 }
+.old-price{
+  text-decoration:line-through;
+  color:#aaa;
+  display:block;
+  font-size:16px;
+}
 
+.new-price{
+  font-size:24px;
+  font-weight:900;
+  color:#fff;
+  margin:5px 0;
+}
 /* RESPONSIVE */
 @media(max-width:1024px){
   .ofertas-grid{
