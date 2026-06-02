@@ -115,3 +115,7 @@
 .ventas-info button:hover{
   transform:scale(1.03);
 }
+
+.ancla{
+  text-decoration:none;
+}

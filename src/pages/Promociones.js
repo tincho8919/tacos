@@ -64,9 +64,11 @@ function Promociones() {
 
                 <span>{promo.price}</span>
 
-                <a heref="https://mpago.la/2JaACq4">
-                  Paga con mercado Pago
-                </a>
+                <button>
+                 <a href="https://mpago.la/2JaACq4" target="_blank" rel="noopener noreferrer" className="ancla">
+                   Comprar ahora
+                 </a>
+                </button>
               </div>
             </div>
           ))}

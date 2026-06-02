@@ -106,4 +106,9 @@
   cursor:pointer;
   font-size:17px;
   font-weight:bold;
+  
+}
+
+.ancla{
+  text-decoration:none;
 }

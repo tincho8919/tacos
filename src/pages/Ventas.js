@@ -73,7 +73,9 @@ function Ventas() {
                 <span>{item.price}</span>
 
                 <button>
-                  Hace tu pedido por whatsapp
+                 <a href="https://mpago.la/2JaACq4" target="_blank" rel="noopener noreferrer" className="ancla">
+                   Comprar ahora
+                 </a>
                 </button>
 
               </div>
