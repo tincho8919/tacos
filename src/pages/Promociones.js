@@ -66,7 +66,7 @@ function Promociones() {
 
                 <a heref="https://mpago.la/2JaACq4">
                   Paga con mercado Pago
-                </button>
+                </a>
               </div>
             </div>
           ))}
