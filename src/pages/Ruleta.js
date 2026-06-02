@@ -4,64 +4,60 @@ import "../Ruleta.css";
 function Ruleta() {
 
   const phone = "5492645010690";
+  const KEY = "ruleta_last_play";
 
   const premios = [
-  "10% OFF",
-  "15% OFF",
-  "20% OFF",
-  "25% OFF",
-  "30% OFF",
-  "40% OFF"
-];
+    "10% OFF",
+    "15% OFF",
+    "20% OFF",
+    "25% OFF",
+    "30% OFF",
+    "40% OFF"
+  ];
 
   const [rotation, setRotation] = useState(0);
   const [spinning, setSpinning] = useState(false);
   const [result, setResult] = useState(null);
   const [blocked, setBlocked] = useState(false);
 
-  const KEY = "ruleta_last_play";
+  // 🔒 24 HORAS REAL
+  useEffect(() => {
+    const last = localStorage.getItem(KEY);
 
-useEffect(() => {
-  const last = localStorage.getItem(KEY);
+    if (last) {
+      const diff = Date.now() - Number(last);
 
-  if (last) {
-    const lastTime = new Date(last).getTime();
-    const now = Date.now();
-
-    const diff = now - lastTime;
-
-    if (diff < 24 * 60 * 60 * 1000) {
-      setBlocked(true);
+      if (diff < 24 * 60 * 60 * 1000) {
+        setBlocked(true);
+      }
     }
-  }
-}, []);
+  }, []);
 
   const girar = () => {
 
-  if (spinning || blocked) return;
+    if (spinning || blocked) return;
 
-  setSpinning(true);
-  setResult(null);
+    setSpinning(true);
+    setResult(null);
 
-  const random = Math.floor(Math.random() * premios.length);
+    const random = Math.floor(Math.random() * premios.length);
+    const anglePerItem = 360 / premios.length;
 
-  const anglePerItem = 360 / premios.length;
-  const newRotation = rotation + 1800 + random * anglePerItem;
+    const newRotation = rotation + 1800 + random * anglePerItem;
+    setRotation(newRotation);
 
-  setRotation(newRotation);
+    setTimeout(() => {
 
-  setTimeout(() => {
+      setResult(premios[random]);
 
-    setResult(premios[random]);
+      // 💾 guardar timestamp correcto
+      localStorage.setItem(KEY, Date.now().toString());
 
-    // ⛔ GUARDA MOMENTO EXACTO
-    localStorage.setItem(KEY, Date.now().toString());
+      setBlocked(true);
+      setSpinning(false);
 
-    setBlocked(true);
-    setSpinning(false);
-
-  }, 3000);
-};
+    }, 3000);
+  };
 
   const whatsapp = () => {
     const msg = `🎡 Ruleta Taco\n🏆 Ganaste: ${result}`;
@@ -77,18 +73,14 @@ useEffect(() => {
 
       <p>⏳ 1 intento cada 24 horas</p>
 
-      {/* RULETA LUNA */}
       <div className="wheel-container">
 
         <div
           className="wheel"
           style={{ transform: `rotate(${rotation}deg)` }}
         >
-
           <div className="shine"></div>
-
           <div className="center-text">TACO</div>
-
         </div>
 
         <div className="pointer">▼</div>
@@ -96,7 +88,7 @@ useEffect(() => {
       </div>
 
       <button onClick={girar} disabled={blocked || spinning}>
-        {blocked ? "Disponible en 24h" : spinning ? "Girando..." : "🎮 GIRAR"}
+        {blocked ? "⏳ Disponible en 24h" : spinning ? "Girando..." : "🎮 GIRAR"}
       </button>
 
       {result && (
