@@ -73,7 +73,7 @@ function Ventas() {
                 <span>{item.price}</span>
 
                 <button>
-                  Comprar ahora
+                  Hace tu pedido por whatsapp
                 </button>
 
               </div>

@@ -65,7 +65,7 @@ function Promociones() {
                 <span>{promo.price}</span>
 
                 <button>
-                  Comprar ahora
+                  Hace tu pedido por whatsapp
                 </button>
               </div>
             </div>
