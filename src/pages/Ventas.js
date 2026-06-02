@@ -21,10 +21,10 @@ function Ventas() {
       img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80"
     },
     {
-      title: "Nachos Supreme",
-      desc: "Nachos con queso fundido y carne",
-      price: "$8.99",
-      img: "https://images.unsplash.com/photo-1513456852971-30c0b8199d4c?auto=format&fit=crop&w=1200&q=80"
+     title: "Nachos Supreme",
+    desc: "Nachos con queso fundido y carne",
+    price: "$8.99",
+    img: "https://images.unsplash.com/photo-1562967916-eb82221dfb92?auto=format&fit=crop&w=1200&q=80"
     }
   ];
 
