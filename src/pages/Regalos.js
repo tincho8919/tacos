@@ -6,8 +6,7 @@ function Regalos() {
       title: "Taco Gratis",
       desc:
         "En compras superiores a $20 te regalamos un taco especial.",
-      img:
-        "https://images.unsplash.com/photo-1613514785940-daed07799d9?auto=format&fit=crop&w=1200&q=80"
+      img: "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg"
     },
     {
       title: "Combo Sorpresa",

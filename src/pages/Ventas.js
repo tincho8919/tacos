@@ -6,7 +6,7 @@ function Ventas() {
       title: "Taco Clásico",
       desc: "Carne, queso cheddar, vegetales frescos",
       price: "$4.99",
-      img: "https://images.unsplash.com/photo-1613514785940-daed07799d9?auto=format&fit=crop&w=1200&q=80"
+      img: "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg"
     },
     {
       title: "Combo Mexicano",

@@ -6,7 +6,7 @@ function Promociones() {
       title: "Combo Taco Lovers",
       desc: "3 tacos + papas + bebida grande",
       price: "$9.99",
-      img: "https://images.unsplash.com/photo-1565299585323-38174c4a6471?auto=format&fit=crop&w=1200&q=80"
+      img: "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg"
     },
     {
       title: "Promo Amigos",
