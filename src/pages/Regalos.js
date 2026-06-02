@@ -1,80 +1,76 @@
 import "../Regalos.css";
 
 function Regalos() {
-  const regalos = [
+
+  const phone = "5492645010690";
+
+  const offers = [
     {
-      title: "Taco Gratis",
-      desc:
-        "En compras superiores a $20 te regalamos un taco especial.",
-      img: "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg"
+      title: "🔥 Combo Taco Lovers",
+      desc: "3 tacos + papas + bebida",
+      price: 9.99,
+      discount: "20% OFF al enviar comprobante"
     },
     {
-      title: "Combo Sorpresa",
-      desc:
-        "Participá y ganá combos exclusivos para compartir.",
-      img:
-        "https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?auto=format&fit=crop&w=1200&q=80"
+      title: "👨‍👩‍👧 Promo Amigos",
+      desc: "6 tacos para compartir",
+      price: 14.99,
+      discount: "20% OFF al enviar comprobante"
     },
     {
-      title: "Cupón de Descuento",
-      desc:
-        "Recibí descuentos especiales por fidelidad.",
-      img:
-        "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80"
+      title: "💥 Mega Combo",
+      desc: "Tacos + nachos + bebida",
+      price: 12.99,
+      discount: "20% OFF al enviar comprobante"
     }
   ];
 
+  const sendReceipt = (item) => {
+    const message = `
+Hola 👋 quiero acceder a la promoción:
+
+🍔 ${item.title}
+💰 Precio: $${item.price}
+🎁 Beneficio: ${item.discount}
+
+📎 Envío mi comprobante de pago aquí para validar el descuento.
+    `;
+
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+  };
+
   return (
-    <main className="regalos-page">
+    <main className="ofertas-page">
 
-      <section className="regalos-hero">
-        <div className="regalos-overlay" />
-
-        <div className="regalos-content">
-          <span>🎁 REGALOS EXCLUSIVOS</span>
-
-          <h1>
-            COMPRÁ,
-            <br />
-            GANÁ Y DISFRUTÁ
-          </h1>
-
-          <p>
-            Premios, sorpresas, cupones y
-            beneficios pensados para vos.
-          </p>
-        </div>
+      <section className="ofertas-hero">
+        <h1>🔥 NUEVAS OFERTAS</h1>
+        <p>
+          💰 20% OFF enviando comprobante de pago por WhatsApp
+        </p>
       </section>
 
-      <section className="regalos-section">
+      <section className="ofertas-grid">
 
-        <h2>Beneficios para clientes</h2>
+        {offers.map((item, index) => (
+          <div className="oferta-card" key={index}>
 
-        <div className="regalos-grid">
+            <h2>{item.title}</h2>
 
-          {regalos.map((item, index) => (
-            <div
-              className="regalo-card"
-              key={index}
-            >
-              <img
-                src={item.img}
-                alt={item.title}
-              />
+            <p>{item.desc}</p>
 
-              <div className="regalo-info">
-                <h3>{item.title}</h3>
+            <span className="price">${item.price}</span>
 
-                <p>{item.desc}</p>
+            <span className="discount">
+              🎁 {item.discount}
+            </span>
 
-                <button>
-                  Obtener regalo
-                </button>
-              </div>
-            </div>
-          ))}
+            <button onClick={() => sendReceipt(item)}>
+              📲 Enviar comprobante por WhatsApp
+            </button>
 
-        </div>
+          </div>
+        ))}
 
       </section>
 
