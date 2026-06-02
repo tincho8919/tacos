@@ -7,7 +7,6 @@ import {
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import WhatsappButton from "./components/WhatsappButton";
-import { Link } from "react-router-dom";
 import Home from "./pages/Home";
 import QuienesSomos from "./pages/QuienesSomos";
 import Promociones from "./pages/Promociones";
