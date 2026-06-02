@@ -1,0 +1,31 @@
+.promotions{
+  background:#151515;
+  color:white;
+  padding:100px 8%;
+}
+
+.promotions h2{
+  font-size:50px;
+  margin-bottom:50px;
+}
+
+.promo-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.promo-card{
+  background:#222;
+  border-radius:30px;
+  padding:50px;
+  transition:.3s;
+}
+
+.promo-card:hover{
+  transform:translateY(-10px);
+}
+
+.promo-card h3{
+  font-size:30px;
+}
